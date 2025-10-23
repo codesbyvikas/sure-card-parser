@@ -52,6 +52,20 @@ Upload your statements and automatically extract key data points like transactio
 
 ---
 
+ParseIQ/
+├── client/              # React + TypeScript frontend
+│   ├── src/
+│   ├── public/
+│   └── .env
+├── server/              # Express + Python backend
+│   ├── routes/
+│   ├── scripts/
+│   ├── .env
+│   └── server.js
+└── README.md
+
+---
+
 ## 📸 Screenshots
 
 | Upload Page | File Selected | Parsed Result |
@@ -68,50 +82,56 @@ Upload your statements and automatically extract key data points like transactio
 
 ---
 
-## ⚙️ Setup Instructions
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)  
+- MongoDB  
+- Cloudinary Account  
+- Google OAuth Credentials  
+- **Agora App ID & App Certificate**
+
+<!-- ✅ End of prerequisites -->
+
+---
+
+### 🖥️ Backend Setup
 
 ```bash
-# =========================
-# 🖥️ BACKEND SETUP
-# =========================
-
-# Navigate to backend
+# Navigate to server folder
 cd server
 
 # Install dependencies
 npm install
 
-# Create .env file
-touch .env
-
-# Example .env
-# -------------------------
+# Create a .env file in server directory
+# Example:
 # PORT=5000
 # PYTHON_PATH=python
-# FRONTEND_BASE_URL=http://localhost:5173
-# -------------------------
+# FRONTEND_URL=http://localhost:5173
 
-# Run backend
+# Start backend server
 npm start
+```
+<!-- ✅ Properly closed backend code block -->
 
+---
 
-# =========================
-# 💻 FRONTEND SETUP
-# =========================
+### Frontend Setup
 
-# Navigate to frontend
+ Navigate to client folder
 cd ../client
 
 # Install dependencies
 npm install
 
-# Create .env file
-touch .env
-
-# Example .env
-# -------------------------
+# Create a .env file in client directory
+# Example:
 # VITE_BACKEND_URL=http://localhost:5000
-# -------------------------
 
-# Run frontend
-npm start
+# Start frontend dev server
+npm run dev
+```
+<!-- ✅ Properly closed frontend code block -->
+
