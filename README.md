@@ -3,25 +3,24 @@
 **ParseIQ** is a secure and fast PDF credit card statement parser.  
 Upload your statements and automatically extract key data points like transaction info, card variant, billing cycle, payment due date, and total balance — all in seconds.
 
-
 ---
 
 ## 🌟 Features
 
-- 🔐 Secure PDF uploads (processed on backend, never stored)  
-- 🧾 Parse credit card statements from multiple banks:
+- 🔐 **Secure PDF uploads** (processed on backend, never stored)  
+- 🧾 **Supports multiple banks:**
   - Kotak Mahindra Bank  
   - Flipkart Axis Bank  
   - HDFC Bank  
-- 📊 Extract key data points automatically:
-  - Transaction information  
+- 📊 **Extracts key data points automatically:**
+  - Transaction details  
   - Card variant & last 4 digits  
   - Billing cycle  
   - Payment due date  
   - Total balance  
-- 💻 Dark-themed, responsive UI  
-- ⚡ Fast parsing with a single PDF upload  
-- 🌐 Works on mobile and desktop  
+- 💻 **Dark-themed, responsive UI**  
+- ⚡ **Single PDF upload for instant results**  
+- 🌐 **Works seamlessly on mobile and desktop**
 
 ---
 
@@ -42,7 +41,7 @@ Upload your statements and automatically extract key data points like transactio
 ### Backend
 - Node.js + Express  
 - Python (PDF parsing helper)  
-- Multer (file uploads)  
+- Multer (for secure file uploads)
 
 ### Tools & Dev Environment
 - VS Code  
@@ -56,31 +55,29 @@ Upload your statements and automatically extract key data points like transactio
 ## 📸 Screenshots
 
 | Upload Page | File Selected | Parsed Result |
-|------------|---------------|---------------|
-| ![Upload]([https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/1.png]) | ![File Selected]([public/screenshots/2.png](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/public/screenshots/2.png)) | ![Result]([public/screenshots/1.png](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/public/screenshots/3.png)) |
+|--------------|---------------|---------------|
+| ![Upload](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/1.png?raw=true) | ![File Selected](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/2.png?raw=true) | ![Result](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/3.png?raw=true) |
 
-> Replace placeholder images with actual screenshots from your app.
+> Ensure these images exist in your repo under `client/src/assets/screenshots/`.
 
 ---
 
 ## 🧑‍💻 Getting Started
 
 ### Prerequisites
-
 - Node.js v18+  
-- Python 3.x (for PDF parsing scripts)  
+- Python 3.x (for PDF parsing)  
 
 ---
 
-### Setup (Backend + Frontend)
+### ⚙️ Backend Setup
 
 ```bash
-# Backend
+# Navigate to backend
 cd server
-npm install
-npm start
 
-# Frontend
-cd ../client
+# Install dependencies
 npm install
-npm start
+
+# Create .env file
+touch .env
