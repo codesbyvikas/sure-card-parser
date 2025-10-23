@@ -1,26 +1,26 @@
+// src/pages/CardResultPage.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { CreditCard, Calendar, DollarSign, FileText, Timer } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { CreditCard, Calendar, DollarSign, FileText, Timer, Building2 } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
+import type { ParsedStatementResponse } from "../types/resultType";
 
 const CardResultPage: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const result = location.state?.result as ParsedStatementResponse;
 
-  const cardInfo = {
-    provider: "HDFC Bank Regalia Gold",
-    cardNumber: "XXXX XXXX XXXX 8392",
-    billingCycle: "01 Oct - 30 Oct 2025",
-    dueDate: "12 Nov 2025",
-    totalBalance: "₹48,750.00",
-    lastPayment: "₹20,000 on 02 Oct 2025",
-  };
+  if (!result) {
+    navigate("/");
+    return null;
+  }
 
   const extractedData = [
-    { icon: <CreditCard className="text-blue-400" />, title: "Card Number", value: cardInfo.cardNumber },
-    { icon: <FileText className="text-blue-400" />, title: "Card Variant", value: cardInfo.provider },
-    { icon: <Calendar className="text-blue-400" />, title: "Billing Cycle", value: cardInfo.billingCycle },
-    { icon: <Timer className="text-blue-400" />, title: "Payment Due Date", value: cardInfo.dueDate },
-    { icon: <DollarSign className="text-blue-400" />, title: "Total Outstanding", value: cardInfo.totalBalance },
+    { icon: <CreditCard className="text-blue-400" />, title: "Card Number", value: result.card_number },
+    { icon: <Calendar className="text-blue-400" />, title: "Billing Cycle", value: result.billing_cycle },
+    { icon: <Timer className="text-blue-400" />, title: "Payment Due Date", value: result.payment_due_date },
+    { icon: <DollarSign className="text-blue-400" />, title: "Total Outstanding", value: result.total_amount_due },
+    { icon: <DollarSign className="text-blue-400" />, title: "Available Cash Limit", value: result.available_cash_limit },
   ];
 
   return (
@@ -44,24 +44,18 @@ const CardResultPage: React.FC = () => {
       >
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-blue-400 font-semibold text-lg">{cardInfo.provider}</h2>
+            <h2 className="text-blue-400 font-semibold text-lg">
+              {result.bank_name || "Unknown Bank"}
+            </h2>
             <p className="text-gray-400 text-sm">Credit Card Statement Summary</p>
           </div>
           <div className="p-3 bg-blue-900/30 rounded-full">
-            <CreditCard size={30} className="text-blue-400" />
+            <Building2 size={30} className="text-blue-400" />
           </div>
         </div>
-        <p className="text-gray-300 text-sm">
-          Last Payment: <span className="text-white">{cardInfo.lastPayment}</span>
-        </p>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="w-full max-w-2xl grid sm:grid-cols-2 gap-6"
-      >
+      <div className="w-full max-w-2xl grid sm:grid-cols-2 gap-6">
         {extractedData.map((item, idx) => (
           <motion.div
             key={idx}
@@ -71,25 +65,19 @@ const CardResultPage: React.FC = () => {
             <div className="p-2 bg-blue-900/30 rounded-full">{item.icon}</div>
             <div>
               <h3 className="text-gray-300 text-sm">{item.title}</h3>
-              <p className="text-white font-semibold">{item.value}</p>
+              <p className="text-white font-semibold">{item.value || "—"}</p>
             </div>
           </motion.div>
         ))}
-      </motion.div>
-
-      <div className="mt-10 flex flex-col items-center">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          onClick={() => navigate("/")}
-          className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full text-white font-medium shadow-lg shadow-blue-800/40"
-        >
-          Back to Upload
-        </motion.button>
-
-        <p className="text-gray-500 text-sm mt-6 text-center">
-          🔒 Your statement data is processed locally and never stored.
-        </p>
       </div>
+
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        onClick={() => navigate("/")}
+        className="bg-blue-600 hover:bg-blue-700 mt-10 px-8 py-3 rounded-full text-white font-medium shadow-lg shadow-blue-800/40"
+      >
+        Back to Upload
+      </motion.button>
     </div>
   );
 };
