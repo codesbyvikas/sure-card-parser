@@ -138,7 +138,7 @@ npm run dev
 ## 👨‍💻 Author
 
 **Vikas Kewat**  
-[GitHub](https://github.com/codesbyvikas) • [LinkedIn](https://www.linkedin.com/in/codesbyvikas) • [Twitter](https://twitter.com/codesbyvikas)
+[GitHub](https://github.com/codesbyvikas) • [LinkedIn](https://www.linkedin.com/in/vikaskewat) 
 
 ---
 
