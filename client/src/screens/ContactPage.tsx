@@ -13,8 +13,7 @@ const ContactPage: React.FC = () => {
           <Mail className="text-yellow-400" size={20} />
           <a
             href="mailto:vikaskewat025@gmail.com"
-            className="text-white hover:text-yellow-400 transition-colors text-sm sm:text-base"
-          >
+            className="text-white hover:text-yellow-400 transition-colors text-sm sm:text-base">
             vikaskewat025@gmail.com
           </a>
         </div>
