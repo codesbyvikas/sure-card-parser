@@ -57,7 +57,7 @@ Upload your statements and automatically extract key data points like transactio
 
 | Upload Page | File Selected | Parsed Result |
 |------------|---------------|---------------|
-| ![Upload](public/screenshots/1.png) | ![File Selected](public/screenshots/2.png) | ![Result](public/screenshots/1.png) |
+| ![Upload]([public/screenshots/1.png](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/public/screenshots/1.png)) | ![File Selected]([public/screenshots/2.png](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/public/screenshots/2.png)) | ![Result]([public/screenshots/1.png](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/public/screenshots/3.png)) |
 
 > Replace placeholder images with actual screenshots from your app.
 
