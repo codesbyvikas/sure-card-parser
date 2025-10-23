@@ -52,6 +52,9 @@ Upload your statements and automatically extract key data points like transactio
 
 ---
 
+## 📁 Folder Structure
+
+```bash
 ParseIQ/
 ├── client/              # React + TypeScript frontend
 │   ├── src/
@@ -63,6 +66,7 @@ ParseIQ/
 │   ├── .env
 │   └── server.js
 └── README.md
+```
 
 ---
 
@@ -78,21 +82,7 @@ ParseIQ/
 
 ### Prerequisites
 - Node.js v18+  
-- Python 3.x (for PDF parsing)  
-
----
-
-## 🧑‍💻 Getting Started
-
-### Prerequisites
-
-- Node.js (v18+)  
-- MongoDB  
-- Cloudinary Account  
-- Google OAuth Credentials  
-- **Agora App ID & App Certificate**
-
-<!-- ✅ End of prerequisites -->
+- Python 3.x (for PDF parsing)
 
 ---
 
@@ -114,13 +104,13 @@ npm install
 # Start backend server
 npm start
 ```
-<!-- ✅ Properly closed backend code block -->
 
 ---
 
-### Frontend Setup
+### 💻 Frontend Setup
 
- Navigate to client folder
+```bash
+# Navigate to client folder
 cd ../client
 
 # Install dependencies
@@ -133,5 +123,25 @@ npm install
 # Start frontend dev server
 npm run dev
 ```
-<!-- ✅ Properly closed frontend code block -->
 
+---
+
+## 🧠 Notes
+
+- PDFs are processed **securely and temporarily** (not stored).  
+- Python helper uses **pdfplumber** for parsing logic.  
+- Backend communicates with Python script via **child_process.spawn**.  
+- UI uses **Tailwind + Framer Motion** for animation and dark theme.
+
+---
+
+## 👨‍💻 Author
+
+**Vikas Kewat**  
+[GitHub](https://github.com/codesbyvikas) • [LinkedIn](https://www.linkedin.com/in/codesbyvikas) • [Twitter](https://twitter.com/codesbyvikas)
+
+---
+
+## 🪪 License
+
+MIT License © 2025 [Vikas Kewat](https://github.com/codesbyvikas)
