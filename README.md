@@ -64,7 +64,7 @@ ParseIQ/
 │   ├── routes/
 │   ├── scripts/
 │   ├── .env
-│   └── server.js
+│   └── index.js
 └── README.md
 ```
 
