@@ -73,9 +73,15 @@ Upload your statements and automatically extract key data points like transactio
 
 ---
 
-### Backend Setup
+### Setup (Backend + Frontend)
 
 ```bash
-cd backend
+# Backend
+cd server
+npm install
+npm start
+
+# Frontend
+cd ../client
 npm install
 npm start
