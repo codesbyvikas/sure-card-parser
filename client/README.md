@@ -1,73 +1,147 @@
-# React + TypeScript + Vite
+# 📄 ParseIQ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ParseIQ** is a secure and fast PDF credit card statement parser.  
+Upload your statements and automatically extract key data points like transaction info, card variant, billing cycle, payment due date, and total balance — all in seconds.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- 🔐 **Secure PDF uploads** (processed on backend, never stored)  
+- 🧾 **Supports multiple banks:**
+  - Kotak Mahindra Bank  
+  - Flipkart Axis Bank  
+  - HDFC Bank  
+- 📊 **Extracts key data points automatically:**
+  - Transaction details  
+  - Card variant & last 4 digits  
+  - Billing cycle  
+  - Payment due date  
+  - Total balance  
+- 💻 **Dark-themed, responsive UI**  
+- ⚡ **Single PDF upload for instant results**  
+- 🌐 **Works seamlessly on mobile and desktop**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉 [Visit ParseIQ](https://sure-card-parser.vercel.app/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🧰 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend
+- React + TypeScript  
+- Tailwind CSS  
+- React Router  
+- Framer Motion  
+
+### Backend
+- Node.js + Express  
+- Python (PDF parsing helper)  
+- Multer (for secure file uploads)
+
+### Tools & Dev Environment
+- VS Code  
+- Vite  
+- Postman / Thunder Client  
+- ESLint + Prettier  
+- Git + GitHub  
+
+---
+
+## 📁 Folder Structure
+
+```bash
+ParseIQ/
+├── client/              # React + TypeScript frontend
+│   ├── src/
+│   ├── public/
+│   └── .env
+├── server/              # Express + Python backend
+│   ├── routes/
+│   ├── scripts/
+│   ├── .env
+│   └── server.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📸 Screenshots
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Upload Page | File Selected | Parsed Result |
+|--------------|---------------|---------------|
+| ![Upload](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/1.png?raw=true) | ![File Selected](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/2.png?raw=true) | ![Result](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/3.png?raw=true) |
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+- Node.js v18+  
+- Python 3.x (for PDF parsing)
+
+---
+
+### 🖥️ Backend Setup
+
+```bash
+# Navigate to server folder
+cd server
+
+# Install dependencies
+npm install
+
+# Create a .env file in server directory
+# Example:
+# PORT=5000
+# PYTHON_PATH=python
+# FRONTEND_URL=http://localhost:5173
+
+# Start backend server
+npm start
 ```
+
+---
+
+### 💻 Frontend Setup
+
+```bash
+# Navigate to client folder
+cd ../client
+
+# Install dependencies
+npm install
+
+# Create a .env file in client directory
+# Example:
+# VITE_BACKEND_URL=http://localhost:5000
+
+# Start frontend dev server
+npm run dev
+```
+
+---
+
+## 🧠 Notes
+
+- PDFs are processed **securely and temporarily** (not stored).  
+- Python helper uses **pdfplumber** for parsing logic.  
+- Backend communicates with Python script via **child_process.spawn**.  
+- UI uses **Tailwind + Framer Motion** for animation and dark theme.
+
+---
+
+## 👨‍💻 Author
+
+**Vikas Kewat**  
+[GitHub](https://github.com/codesbyvikas) • [LinkedIn](https://www.linkedin.com/in/codesbyvikas) • [Twitter](https://twitter.com/codesbyvikas)
+
+---
+
+## 🪪 License
+
+MIT License © 2025 [Vikas Kewat](https://github.com/codesbyvikas)
