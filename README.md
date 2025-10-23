@@ -3,7 +3,6 @@
 **ParseIQ** is a secure and fast PDF credit card statement parser.  
 Upload your statements and automatically extract key data points like transaction info, card variant, billing cycle, payment due date, and total balance — all in seconds.
 
-![ParseIQ Banner](https://sure-card-parser.vercel.app/favicon.ico)
 
 ---
 
@@ -58,7 +57,7 @@ Upload your statements and automatically extract key data points like transactio
 
 | Upload Page | File Selected | Parsed Result |
 |------------|---------------|---------------|
-| ![Upload](https://via.placeholder.com/600x300?text=Upload+Page) | ![File Selected](https://via.placeholder.com/600x300?text=File+Selected) | ![Result](https://via.placeholder.com/600x400?text=Parsed+Result) |
+| ![Upload](public/screenshots/1.png) | ![File Selected](public/screenshots/2.png) | ![Result](public/screenshots/1.png) |
 
 > Replace placeholder images with actual screenshots from your app.
 
