@@ -58,8 +58,6 @@ Upload your statements and automatically extract key data points like transactio
 |--------------|---------------|---------------|
 | ![Upload](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/1.png?raw=true) | ![File Selected](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/2.png?raw=true) | ![Result](https://github.com/codesbyvikas/sure-card-parser/blob/main/client/src/assets/screenshots/3.png?raw=true) |
 
-> Ensure these images exist in your repo under `client/src/assets/screenshots/`.
-
 ---
 
 ## 🧑‍💻 Getting Started
@@ -70,9 +68,13 @@ Upload your statements and automatically extract key data points like transactio
 
 ---
 
-### ⚙️ Backend Setup
+## ⚙️ Setup Instructions
 
 ```bash
+# =========================
+# 🖥️ BACKEND SETUP
+# =========================
+
 # Navigate to backend
 cd server
 
@@ -81,3 +83,35 @@ npm install
 
 # Create .env file
 touch .env
+
+# Example .env
+# -------------------------
+# PORT=5000
+# PYTHON_PATH=python
+# FRONTEND_BASE_URL=http://localhost:5173
+# -------------------------
+
+# Run backend
+npm start
+
+
+# =========================
+# 💻 FRONTEND SETUP
+# =========================
+
+# Navigate to frontend
+cd ../client
+
+# Install dependencies
+npm install
+
+# Create .env file
+touch .env
+
+# Example .env
+# -------------------------
+# VITE_BACKEND_URL=http://localhost:5000
+# -------------------------
+
+# Run frontend
+npm start
