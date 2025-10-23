@@ -1,4 +1,3 @@
-// src/helpers/statementApiHelper.ts
 import axios from "axios";
 import type { ParsedStatementResponse } from "../../types/resultType";
 
@@ -12,7 +11,7 @@ const statementApiHelper = {
   ): Promise<ParsedStatementResponse> => {
     const formData = new FormData();
     formData.append("pdf", file);
-    formData.append("bank", bank); // send selected bank
+    formData.append("bank", bank); 
 
     try {
       const res = await axios.post(`${API_URL}/parse/parse-statement`, formData, {

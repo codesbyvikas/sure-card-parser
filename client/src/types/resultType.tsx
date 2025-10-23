@@ -1,6 +1,3 @@
-// src/types/statement.ts
-
-// Represents the parsed output from the Python parser
 export interface ParsedStatementResponse {
   bank_name?: string;
   card_number?: string;
@@ -10,7 +7,7 @@ export interface ParsedStatementResponse {
   available_cash_limit?: string;
 }
 
-// Represents an error response
+
 export interface StatementErrorResponse {
   error: string;
   raw?: string;

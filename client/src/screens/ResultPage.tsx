@@ -1,7 +1,6 @@
-// src/pages/CardResultPage.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { CreditCard, Calendar, DollarSign, FileText, Timer, Building2 } from "lucide-react";
+import { CreditCard, Calendar, DollarSign, Timer, Building2 } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { ParsedStatementResponse } from "../types/resultType";
 

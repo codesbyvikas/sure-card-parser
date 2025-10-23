@@ -7,7 +7,6 @@ const parseRoutes = require("./routes/parser");
 const app = express();
 
 
-// Middleware
 app.use(express.json());
 app.use(
   cors({
